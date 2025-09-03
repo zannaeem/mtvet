@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
+  const scrollToEbook = () => {
+    const ebookSection = document.getElementById('ebook-section');
+    if (ebookSection) {
+      ebookSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -29,8 +39,9 @@ const HeroSection = () => {
               PENERAJU MASA DEPAN
             </p>
             <Button 
+              onClick={scrollToEbook}
               size="lg"
-              className="bg-tvet-red hover:bg-tvet-red/90 text-white px-8 py-3 text-lg font-semibold rounded-full shadow-elegant transition-smooth"
+              className="bg-tvet-red hover:bg-tvet-red/90 text-white px-8 py-3 text-lg font-semibold rounded-full shadow-elegant transition-smooth cursor-pointer"
             >
               Ketahui
             </Button>
