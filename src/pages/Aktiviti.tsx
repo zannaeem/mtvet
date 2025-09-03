@@ -42,24 +42,38 @@ const Aktiviti = () => {
                   </div>
                 </div>
 
-                                 {/* Video Section */}
-                 <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-                   <div className="aspect-video w-full">
-                     <iframe
-                       src="https://www.youtube.com/embed/TaHlg8cuhS0?list=TLGGivbS3Ev6W0AyNTA4MjAyNQ"
-                       title="LATEST MAJLIS TVET MONTAJ 2025"
-                       className="w-full h-full border-0"
-                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                       allowFullScreen
-                     ></iframe>
-                   </div>
-                 </div>
+                {/* Video Section */}
+                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                  <div className="aspect-video w-full">
+                    <iframe
+                      src="https://www.youtube.com/embed/TaHlg8cuhS0"
+                      title="LATEST MAJLIS TVET MONTAJ 2025"
+                      className="w-full h-full border-0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                </div>
+
+                {/* Video Description */}
+                <div className="mt-8 text-center">
+                  <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
+                    LATEST MAJLIS TVET MONTAJ 2025
+                  </h3>
+                  <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Tonton video terkini Majlis TVET Sabah yang menampilkan aktiviti dan program 
+                    yang telah dilaksanakan sepanjang tahun 2025. Video ini memaparkan montaj 
+                    aktiviti-aktiviti penting yang telah dijalankan oleh Majlis TVET Sabah.
+                  </p>
+                </div>
 
                 {/* Additional Information */}
                 <div className="mt-12 text-center">
                   <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Tonton video terkini Majlis TVET Sabah yang menampilkan aktiviti dan program 
-                    yang telah dilaksanakan sepanjang tahun 2025.
+                    Majlis TVET Sabah komited untuk memberikan pendidikan teknikal dan vokasional 
+                    yang berkualiti kepada rakyat Sabah. Tonton video ini untuk melihat usaha 
+                    dan komitmen kami dalam membangunkan modal insan yang berkemahiran tinggi.
                   </p>
                 </div>
               </div>
