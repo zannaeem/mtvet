@@ -8,26 +8,26 @@ const AIChatbot = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-40">
       {/* Chatbot Interface - Only show when expanded */}
       {isExpanded && (
         <div className="mb-4 bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-tvet-blue">
           <iframe
             src="https://www.chatbase.co/chatbot-iframe/SwcVPMjJ64i01GXNW0sqX"
-            width="400"
-            height="600"
+            width="320"
+            height="500"
             frameBorder="0"
             title="Majlis TVET Sabah AI Chatbot"
-            className="rounded-2xl"
+            className="rounded-2xl w-[320px] h-[500px] md:w-[400px] md:h-[600px]"
           />
         </div>
       )}
       
       {/* Chat Bubble Button - Always visible */}
-      <div className="flex items-center space-x-3">
-        {/* Text Label */}
-        <div className="bg-white px-4 py-2 rounded-full shadow-lg border border-gray-200">
-          <span className="text-sm font-medium text-gray-700 whitespace-nowrap">
+      <div className="flex items-center space-x-2 md:space-x-3">
+        {/* Text Label - Hidden on very small screens */}
+        <div className="hidden sm:block bg-white px-3 md:px-4 py-2 rounded-full shadow-lg border border-gray-200">
+          <span className="text-xs md:text-sm font-medium text-gray-700 whitespace-nowrap">
             Jom tanya TVET AI!
           </span>
         </div>
@@ -35,7 +35,7 @@ const AIChatbot = () => {
         {/* Chat Button */}
         <button
           onClick={toggleChatbot}
-          className={`w-16 h-16 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 ${
+          className={`w-14 h-14 md:w-16 md:h-16 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 ${
             isExpanded 
               ? 'bg-red-600 hover:bg-red-700' 
               : 'bg-red-500 hover:bg-red-600'
@@ -44,12 +44,12 @@ const AIChatbot = () => {
         >
           {isExpanded ? (
             // Close icon when expanded
-            <svg className="w-8 h-8 mx-auto text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 md:w-8 md:h-8 mx-auto text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
             // Cute robot icon when collapsed
-            <svg className="w-8 h-8 mx-auto text-white" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 md:w-8 md:h-8 mx-auto text-white" fill="currentColor" viewBox="0 0 24 24">
               {/* Robot Head */}
               <circle cx="12" cy="12" r="10" fill="currentColor"/>
               
