@@ -4,9 +4,10 @@ import { Link, useLocation } from "react-router-dom";
 
 interface NavigationProps {
   className?: string;
+  onNavigate?: () => void;
 }
 
-const Navigation = ({ className }: NavigationProps) => {
+const Navigation = ({ className, onNavigate }: NavigationProps) => {
   const location = useLocation();
   
   const navItems = [
@@ -16,6 +17,12 @@ const Navigation = ({ className }: NavigationProps) => {
     { label: "Aktiviti", href: "/aktiviti" },
     { label: "Hubungi Kami", href: "/hubungi-kami" },
   ];
+
+  const handleNavigation = () => {
+    if (onNavigate) {
+      onNavigate();
+    }
+  };
 
   return (
     <nav className={cn("flex items-center space-x-8", className)}>
@@ -32,6 +39,7 @@ const Navigation = ({ className }: NavigationProps) => {
                 : "text-foreground hover:text-primary hover:bg-transparent"
             )}
             asChild
+            onClick={handleNavigation}
           >
             <Link to={item.href}>{item.label}</Link>
           </Button>
